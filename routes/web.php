@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function (){
-    return redirect('jobs/index');
+    return redirect('jobs');
 });
 
 Route::resource('jobs', JobController::class)
