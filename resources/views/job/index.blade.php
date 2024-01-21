@@ -1,5 +1,4 @@
 <x-layout>
-    
     <x-card class="mb-4 text-sm">Filters
         <div class="mb-4 grid grid-cols-2 gap-4">
             <div>1</div>

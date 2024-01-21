@@ -12,7 +12,8 @@ class JobController extends Controller
      */
     public function index()
     {
-        return view('job.index', ['jobs' => Job::all()]);
+        $jobs = Job::with('employer')->get();
+        return view('job.index', compact('jobs'));
     }
 
     /**
@@ -36,7 +37,9 @@ class JobController extends Controller
      */
     public function show(Job $job)
     {
-        return view('job.show', compact('job'));
+        return view(
+            'job.show', ['job' => $job->load('employer.jobs')]
+        );
     }
 
     /**
